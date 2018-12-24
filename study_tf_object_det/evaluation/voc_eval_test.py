@@ -37,10 +37,10 @@ def infer_on_eval_dataset():
     det_result_dict = {}
 
     for image_id in output_dict_map:
-        output_dict = output_dict_map["image_id"]
+        output_dict = output_dict_map[image_id]
         for i in range(output_dict["num_detections"]):
             confidence = output_dict['detection_scores'][i]
-            bbox = output_dict['detection_boxes'][i]
+            bbox = list(output_dict['detection_boxes'][i,:])
             class_name = category_index[output_dict['detection_classes'][i]]["name"]
 
             if class_name not in det_result_dict:
@@ -72,7 +72,9 @@ def run_voc_val():
     print('Mean AP = {:.4f}'.format(np.mean(aps)))
 
 if __name__ == '__main__':
-    infer_on_eval_dataset()
-    run_voc_val()
+    category_index = label_map_util.create_category_index_from_labelmap(VOC_LABELS_PATH)
+    print(category_index)
+    # infer_on_eval_dataset()
+    # run_voc_val()
 
 

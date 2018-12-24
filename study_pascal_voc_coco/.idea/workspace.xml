@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c404ad3d-739e-4777-bf14-ceda019c268e" name="Default Changelist" comment="" />
+    <list default="true" id="c404ad3d-739e-4777-bf14-ceda019c268e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/create_pascal_tf_record.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_pascal_tf_record.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create_pascal_tf_record.sh" beforeDir="false" afterPath="$PROJECT_DIR$/create_pascal_tf_record.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_tf_object_det/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../study_tf_object_det/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_tf_object_det/evaluation/voc_eval_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_tf_object_det/evaluation/voc_eval_test.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,10 +28,10 @@
         <counts>
           <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -35,21 +40,21 @@
           <entry key="md" value="7" />
           <entry key="pbtxt" value="5" />
           <entry key="png" value="1" />
-          <entry key="py" value="42" />
-          <entry key="sh" value="3" />
+          <entry key="py" value="44" />
+          <entry key="sh" value="5" />
           <entry key="txt" value="14" />
-          <entry key="xml" value="23" />
+          <entry key="xml" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Bash" value="3" />
+          <entry key="Bash" value="5" />
           <entry key="Image" value="1" />
           <entry key="JSON" value="8" />
           <entry key="Markdown" value="7" />
           <entry key="PLAIN_TEXT" value="19" />
-          <entry key="Python" value="42" />
-          <entry key="XML" value="23" />
+          <entry key="Python" value="44" />
+          <entry key="XML" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -57,19 +62,19 @@
           <entry key="dummy" value="8" />
           <entry key="json" value="301" />
           <entry key="md" value="1330" />
-          <entry key="py" value="8751" />
-          <entry key="sh" value="114" />
+          <entry key="py" value="8763" />
+          <entry key="sh" value="122" />
           <entry key="txt" value="13" />
           <entry key="xml" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Bash" value="114" />
+          <entry key="Bash" value="122" />
           <entry key="JSON" value="301" />
           <entry key="Markdown" value="1330" />
           <entry key="PLAIN_TEXT" value="21" />
-          <entry key="Python" value="8751" />
+          <entry key="Python" value="8763" />
           <entry key="XML" value="10" />
         </counts>
       </usages-collector>
@@ -78,59 +83,49 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/create_coco_tf_record.py">
+        <entry file="file://$PROJECT_DIR$/create_pascal_tf_record.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="196" column="9" selection-start-line="196" selection-start-column="9" selection-end-line="196" selection-end-column="9" />
+            <state relative-caret-position="414">
+              <caret line="95" column="13" lean-forward="true" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
               <folding>
-                <element signature="e#1236#1274#0" expanded="true" />
+                <element signature="e#960#998#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/statistics/pascal_voc_statics.py">
+        <entry file="file://$PROJECT_DIR$/dataset/voc/VOC2012/Annotations/2007_000584.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1672">
-              <caret line="92" column="29" selection-start-line="92" selection-start-column="29" selection-end-line="92" selection-end-column="29" />
-              <folding>
-                <element signature="e#58#69#0" expanded="true" />
-                <marker date="1545294025619" expanded="true" signature="482:721" ph="..." />
-                <marker date="1545294025619" expanded="true" signature="986:992" ph="..." />
-                <marker date="1545294025619" expanded="true" signature="4973:4975" ph="..." />
-              </folding>
+            <state relative-caret-position="76">
+              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.py">
+        <entry file="file://$PROJECT_DIR$/utils/dataset_util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-column="24" />
+            <state relative-caret-position="234">
+              <caret line="74" selection-start-line="74" selection-end-line="74" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dataset_convert/voc_to_coco.py">
+        <entry file="file://$PROJECT_DIR$/create_coco_tf_record.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="152">
+              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dataset_convert/pascal_voc_xml2json.py">
+        <entry file="file://$PROJECT_DIR$/create_pascal_tf_record.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2090">
-              <caret line="112" column="36" selection-start-line="112" selection-start-column="36" selection-end-line="112" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-                <marker date="1545363996430" expanded="true" signature="6212:6289" ph="..." />
-              </folding>
+            <state relative-caret-position="95">
+              <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -138,7 +133,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/label_map_util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2679">
+            <state relative-caret-position="2755">
               <caret line="145" column="6" selection-start-line="145" selection-start-column="6" selection-end-line="145" selection-end-column="6" />
               <folding>
                 <element signature="e#25#39#0" expanded="true" />
@@ -150,7 +145,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/statistics/coco_statics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
+            <state relative-caret-position="247">
               <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
               <folding>
                 <element signature="e#55#79#0" expanded="true" />
@@ -174,7 +169,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/make_dataset/make_mini_coco.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2850">
+            <state relative-caret-position="2907">
               <caret line="153" column="17" selection-start-line="153" selection-start-column="17" selection-end-line="153" selection-end-column="17" />
               <folding>
                 <element signature="e#67#76#0" expanded="true" />
@@ -186,7 +181,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/data_anna_load.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1064">
+            <state relative-caret-position="1178">
               <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
               <folding>
                 <element signature="e#61#89#0" expanded="true" />
@@ -207,7 +202,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>bbox</find>
       <find>&quot;id&quot;: 1768}</find>
       <find>241668</find>
       <find>274687</find>
@@ -237,11 +231,15 @@
       <find>label_map_path</find>
       <find>add image with</find>
       <find>current_image_id =</find>
+      <find>YEARS</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/dataset/voc/Annotations</dir>
       <dir>$PROJECT_DIR$</dir>
     </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -263,13 +261,11 @@
         <option value="$PROJECT_DIR$/dataset/voc/VOC2012/Annotations/2011_004929.xml" />
         <option value="$PROJECT_DIR$/dataset/voc/VOC2012/Annotations/2011_004934.xml" />
         <option value="$PROJECT_DIR$/dataset/voc/VOC2012/Annotations/2011_004935.xml" />
-        <option value="$PROJECT_DIR$/create_pascal_tf_record.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/dataset/coco/annotations/instances_val.json" />
         <option value="$PROJECT_DIR$/dataset/coco/annotations/instances_train.json" />
         <option value="$PROJECT_DIR$/dataset/coco/annotations/instances_test.json" />
         <option value="$PROJECT_DIR$/create_coco_tf_record.sh" />
-        <option value="$PROJECT_DIR$/create_pascal_tf_record.sh" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/create_coco_tf_record.py" />
         <option value="$PROJECT_DIR$/statistics/pascal_voc_classes.py" />
@@ -281,6 +277,8 @@
         <option value="$PROJECT_DIR$/eval.md" />
         <option value="$PROJECT_DIR$/dataset_convert/voc_to_coco.py" />
         <option value="$PROJECT_DIR$/dataset_convert/pascal_voc_xml2json.py" />
+        <option value="$PROJECT_DIR$/create_pascal_tf_record.sh" />
+        <option value="$PROJECT_DIR$/create_pascal_tf_record.py" />
       </list>
     </option>
   </component>
@@ -290,12 +288,13 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1920" />
-    <option name="y" value="173" />
-    <option name="width" value="1440" />
-    <option name="height" value="797" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1440" />
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -307,6 +306,24 @@
             <path>
               <item name="study_pascal_voc_coco" type="b2602c69:ProjectViewProjectNode" />
               <item name="study_pascal_voc_coco" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study_pascal_voc_coco" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study_pascal_voc_coco" type="462c0819:PsiDirectoryNode" />
+              <item name="dataset" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study_pascal_voc_coco" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study_pascal_voc_coco" type="462c0819:PsiDirectoryNode" />
+              <item name="dataset" type="462c0819:PsiDirectoryNode" />
+              <item name="voc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study_pascal_voc_coco" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study_pascal_voc_coco" type="462c0819:PsiDirectoryNode" />
+              <item name="dataset" type="462c0819:PsiDirectoryNode" />
+              <item name="voc" type="462c0819:PsiDirectoryNode" />
+              <item name="VOC2012" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -489,9 +506,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="173" width="1440" height="797" extended-state="0" />
+    <frame x="1440" y="23" width="1920" height="1057" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24711816" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18683083" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -505,7 +523,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.43763214" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32944608" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -638,20 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/create_coco_tf_record.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/create_pascal_tf_record.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dataset/voc/VOC2012/ImageSets/Main/val.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -663,13 +667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/voc/VOC2012/Annotations/2007_000584.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -701,13 +698,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="457">
           <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/create_pascal_tf_record.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1223">
-          <caret line="46" column="40" lean-forward="true" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -784,17 +774,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/dataset_util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/create_coco_tf_record.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="196" column="9" selection-start-line="196" selection-start-column="9" selection-end-line="196" selection-end-column="9" />
+        <state relative-caret-position="394">
+          <caret line="213" column="30" selection-start-line="213" selection-start-column="30" selection-end-line="213" selection-end-column="30" />
           <folding>
             <element signature="e#1236#1274#0" expanded="true" />
           </folding>
@@ -803,7 +786,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/statistics/pascal_voc_statics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1672">
+        <state relative-caret-position="1748">
           <caret line="92" column="29" selection-start-line="92" selection-start-column="29" selection-end-line="92" selection-end-column="29" />
           <folding>
             <element signature="e#58#69#0" expanded="true" />
@@ -830,7 +813,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dataset_convert/pascal_voc_xml2json.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2090">
+        <state relative-caret-position="2128">
           <caret line="112" column="36" selection-start-line="112" selection-start-column="36" selection-end-line="112" selection-end-column="36" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
@@ -841,7 +824,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/label_map_util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2679">
+        <state relative-caret-position="2755">
           <caret line="145" column="6" selection-start-line="145" selection-start-column="6" selection-end-line="145" selection-end-column="6" />
           <folding>
             <element signature="e#25#39#0" expanded="true" />
@@ -851,7 +834,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/statistics/coco_statics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
+        <state relative-caret-position="247">
           <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
           <folding>
             <element signature="e#55#79#0" expanded="true" />
@@ -871,7 +854,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/make_dataset/make_mini_coco.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2850">
+        <state relative-caret-position="2907">
           <caret line="153" column="17" selection-start-line="153" selection-start-column="17" selection-end-line="153" selection-end-column="17" />
           <folding>
             <element signature="e#67#76#0" expanded="true" />
@@ -881,11 +864,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/data_anna_load.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
+        <state relative-caret-position="1178">
           <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
           <folding>
             <element signature="e#61#89#0" expanded="true" />
             <marker date="1545284184371" expanded="true" signature="257:2242" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create_coco_tf_record.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create_pascal_tf_record.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/dataset_util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/voc/VOC2012/Annotations/2007_000584.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create_pascal_tf_record.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="95" column="13" lean-forward="true" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
+          <folding>
+            <element signature="e#960#998#0" expanded="true" />
           </folding>
         </state>
       </provider>

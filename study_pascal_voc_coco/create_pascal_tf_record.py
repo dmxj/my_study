@@ -43,7 +43,6 @@ flags.DEFINE_string('set', 'train', 'Convert training set, validation set or '
                                     'merged set.')
 flags.DEFINE_string('annotations_dir', 'Annotations',
                     '(Relative) path to annotations directory.')
-flags.DEFINE_string('year', 'VOC2007', 'Desired challenge year.')
 flags.DEFINE_string('output_path', '', 'Path to output TFRecord')
 flags.DEFINE_string('label_map_path', 'data/pascal_label_map.pbtxt',
                     'Path to label map proto')
@@ -52,7 +51,6 @@ flags.DEFINE_boolean('ignore_difficult_instances', False, 'Whether to ignore '
 FLAGS = flags.FLAGS
 
 SETS = ['train', 'val', 'trainval', 'test']
-YEARS = ['VOC2007', 'VOC2012', 'merged']
 
 
 def dict_to_tf_example(data,
@@ -81,7 +79,8 @@ def dict_to_tf_example(data,
     Raises:
       ValueError: if the image pointed to by data['filename'] is not a valid JPEG
     """
-    img_path = os.path.join(data['folder'], image_subdirectory, data['filename'])
+    # img_path = os.path.join(data['folder'], image_subdirectory, data['filename'])
+    img_path = os.path.join(image_subdirectory, data['filename'])
     full_path = os.path.join(dataset_directory, img_path)
     with tf.gfile.GFile(full_path, 'rb') as fid:
         encoded_jpg = fid.read()
@@ -147,37 +146,30 @@ def dict_to_tf_example(data,
 def main(_):
     if FLAGS.set not in SETS:
         raise ValueError('set must be in : {}'.format(SETS))
-    if FLAGS.year not in YEARS:
-        raise ValueError('year must be in : {}'.format(YEARS))
 
     data_dir = FLAGS.data_dir
-    years = ['VOC2007', 'VOC2012']
-    if FLAGS.year != 'merged':
-        years = [FLAGS.year]
 
     writer = tf.python_io.TFRecordWriter(FLAGS.output_path)
 
     label_map_dict = label_map_util.get_label_map_dict(FLAGS.label_map_path)
 
-    for year in years:
-        print('Reading from PASCAL %s dataset.', year)
-        logging.info('Reading from PASCAL %s dataset.', year)
-        examples_path = os.path.join(data_dir, year, 'ImageSets', 'Main',
-                                     FLAGS.set + '.txt')
-        annotations_dir = os.path.join(data_dir, year, FLAGS.annotations_dir)
-        examples_list = dataset_util.read_examples_list(examples_path)
-        for idx, example in enumerate(examples_list):
-            if idx % 100 == 0:
-                logging.info('On image %d of %d', idx, len(examples_list))
-            path = os.path.join(annotations_dir, example + '.xml')
-            with tf.gfile.GFile(path, 'r') as fid:
-                xml_str = fid.read()
-            xml = etree.fromstring(xml_str)
-            data = dataset_util.recursive_parse_xml_to_dict(xml)['annotation']
+    print('Reading from PASCAL dataset.')
+    examples_path = os.path.join(data_dir, 'ImageSets', 'Main',
+                                 FLAGS.set + '.txt')
+    annotations_dir = os.path.join(data_dir, FLAGS.annotations_dir)
+    examples_list = dataset_util.read_examples_list(examples_path)
+    for idx, example in enumerate(examples_list):
+        if idx % 100 == 0:
+            logging.info('On image %d of %d', idx, len(examples_list))
+        path = os.path.join(annotations_dir, example + '.xml')
+        with tf.gfile.GFile(path, 'r') as fid:
+            xml_str = fid.read()
+        xml = etree.fromstring(xml_str)
+        data = dataset_util.recursive_parse_xml_to_dict(xml)['annotation']
 
-            tf_example = dict_to_tf_example(data, FLAGS.data_dir, label_map_dict,
-                                            FLAGS.ignore_difficult_instances)
-            writer.write(tf_example.SerializeToString())
+        tf_example = dict_to_tf_example(data, FLAGS.data_dir, label_map_dict,
+                                        FLAGS.ignore_difficult_instances)
+        writer.write(tf_example.SerializeToString())
 
     writer.close()
 
