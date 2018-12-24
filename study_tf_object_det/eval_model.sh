@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+python /usr/local/src/github/models/research/object_detection/legacy/eval.py --logtostderr --pipeline_config_path=./faster_rcnn_resnet101_pets.config --checkpoint_dir=./train_pets_model_dir/ --eval_dir=./eval_dir/
