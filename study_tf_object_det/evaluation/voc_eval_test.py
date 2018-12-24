@@ -9,6 +9,7 @@ from evaluation import voc_eval
 from utils import label_map_util
 import mmcv
 import os
+import numpy as np
 
 # 数据相关路径
 VOC_TEST_EVALSET_FILE = "/Users/rensike/Files/temp/voc_mini/ImageSets/Main/val.txt"
@@ -57,15 +58,18 @@ def infer_on_eval_dataset():
 
 def run_voc_val():
     category_index = label_map_util.create_category_index_from_labelmap(VOC_LABELS_PATH)
+    aps = []
     for cat_id in category_index:
         class_name = category_index[cat_id]["name"]
         rec, prec, ap = voc_eval.voc_eval(TEST_RESULT_FILE,
-                          os.path.join(VOC_TEST_ANNO_PATH,"{}.xml",
+                          os.path.join(VOC_TEST_ANNO_PATH,"{}.xml"),
                           VOC_TEST_EVALSET_FILE,
                           class_name,
-                          EVAL_CACHE_DIR))
+                          EVAL_CACHE_DIR)
+        aps += [ap]
+        print("class:{}, recall = {:.4f}, precision = {:.4f}, ap = {:.4f}".format(class_name,rec,prec,ap))
 
-        print("class:{}, recall = {}, precision = {}, ap = {}".format(class_name,rec,prec,ap))
+    print('Mean AP = {:.4f}'.format(np.mean(aps)))
 
 if __name__ == '__main__':
     infer_on_eval_dataset()

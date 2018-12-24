@@ -196,7 +196,7 @@ class ObjectDetectionModel(object):
 
         output_dict_map = {}
         for ix, image in enumerate(image_lists):
-            image_id = os.path.split(image)[-1].rsplit(".",1)[0]
+            image_id = os.path.split(image_path_list[ix])[-1].rsplit(".",1)[0]
             # all outputs are float32 numpy arrays, so convert types as appropriate
             output_dict_item = {}
             output_dict_item['num_detections'] = int(output_dict['num_detections'][ix])
