@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -* -
 import sys
+
 sys.path.append("/Users/rensike/Workspace/models/research")
 import numpy as np
 import os
@@ -9,6 +10,7 @@ from distutils.version import StrictVersion
 from PIL import Image
 import glob
 import time
+import collections
 
 from utils import label_map_util
 from utils import visualization_utils as vis_util
@@ -69,6 +71,8 @@ class ObjectDetectionModel(object):
         '''
         category_index = label_map_util.create_category_index_from_labelmap(self.label_map_path, use_display_name=True)
         self.category_index = category_index
+        self.category_name_index = {category_index[cat_id]["name"]: category_index[cat_id] for cat_id in category_index}
+        self.categories = label_map_util.create_categories_from_labelmap(self.label_map_path)
 
     def reframe_detection_mask(self, image):
         '''
@@ -92,7 +96,7 @@ class ObjectDetectionModel(object):
             self.tensor_dict['detection_masks'] = tf.expand_dims(
                 detection_masks_reframed, 0)
 
-    def transfrom_input(self, image_path, resize_width=0,resize_height=0):
+    def transfrom_input(self, image_path, resize_width=0, resize_height=0):
         '''
         根据图片路径转换输入图片
         :param image_path:
@@ -149,7 +153,31 @@ class ObjectDetectionModel(object):
         image_drawed = image_util.load_numpy_array_into_image(image_np)
         image_drawed.save(save_path)
 
-    def run_inference(self, image_path, is_show=False, save_path=None):
+    def inference_image_np(self, image_np, is_filter=False, is_show=False, save_path=None):
+        self.reframe_detection_mask(image_np)
+        # Run inference
+        output_dict = self.sess.run(self.tensor_dict,
+                                    feed_dict={self.image_tensor: np.expand_dims(image_np, 0)})
+
+        # all outputs are float32 numpy arrays, so convert types as appropriate
+        output_dict['num_detections'] = int(output_dict['num_detections'][0])
+        output_dict['detection_classes'] = output_dict[
+            'detection_classes'][0].astype(np.uint8)
+        # ymin,xmin,ymax,xmax
+        output_dict['detection_boxes'] = output_dict['detection_boxes'][0]
+        output_dict['detection_scores'] = output_dict['detection_scores'][0]
+        if 'detection_masks' in output_dict:
+            output_dict['detection_masks'] = output_dict['detection_masks'][0]
+
+        if is_show:
+            self.show_detection_result(image_np, output_dict)
+
+        if save_path is not None:
+            self.save_detection_result(image_np, output_dict, save_path)
+
+        return self.filter_output_dict(output_dict) if is_filter else output_dict
+
+    def run_inference(self, image_path, is_filter=False, is_show=False, save_path=None):
         '''
         运行检测任务
         :param image_path: 图片路径
@@ -158,45 +186,16 @@ class ObjectDetectionModel(object):
         :return:
         '''
         image = self.transfrom_input(image_path)
-        self.reframe_detection_mask(image)
+        return self.inference_image_np(image, is_filter, is_show, save_path)
+
+    def inference_image_np_batch(self, image_np_batch, is_filter=False, is_show=False, save_path_list=None):
+        self.reframe_detection_mask(image_np_batch[0])
         # Run inference
         output_dict = self.sess.run(self.tensor_dict,
-                                    feed_dict={self.image_tensor: np.expand_dims(image, 0)})
+                                    feed_dict={self.image_tensor: image_np_batch})
 
-        # all outputs are float32 numpy arrays, so convert types as appropriate
-        output_dict['num_detections'] = int(output_dict['num_detections'][0])
-        output_dict['detection_classes'] = output_dict[
-            'detection_classes'][0].astype(np.uint8)
-        output_dict['detection_boxes'] = output_dict['detection_boxes'][0]
-        output_dict['detection_scores'] = output_dict['detection_scores'][0]
-        if 'detection_masks' in output_dict:
-            output_dict['detection_masks'] = output_dict['detection_masks'][0]
-
-        if is_show:
-            self.show_detection_result(image, output_dict)
-
-        if save_path is not None:
-            self.save_detection_result(image, output_dict, save_path)
-
-        return output_dict
-
-    def run_inference_batch(self, image_path_list, is_show=False):
-        '''
-        batch运行检测任务
-        :param image_path: 图片路径
-        :param is_show: 是否显示
-        :param save_path: 保存的路径
-        :return:
-        '''
-        image_lists = np.array([self.transfrom_input(img_path,500,500) for img_path in image_path_list])
-        self.reframe_detection_mask(image_lists[0])
-        # Run inference
-        output_dict = self.sess.run(self.tensor_dict,
-                                    feed_dict={self.image_tensor: image_lists})
-
-        output_dict_map = {}
-        for ix, image in enumerate(image_lists):
-            image_id = os.path.split(image_path_list[ix])[-1].rsplit(".",1)[0]
+        output_dict_list = []
+        for ix, image in enumerate(image_np_batch):
             # all outputs are float32 numpy arrays, so convert types as appropriate
             output_dict_item = {}
             output_dict_item['num_detections'] = int(output_dict['num_detections'][ix])
@@ -206,31 +205,105 @@ class ObjectDetectionModel(object):
             output_dict_item['detection_scores'] = output_dict['detection_scores'][ix]
             if 'detection_masks' in output_dict:
                 output_dict_item['detection_masks'] = output_dict['detection_masks'][ix]
-            output_dict_map[image_id] = output_dict_item
+            output_dict_list.append(self.filter_output_dict(output_dict_item) if is_filter else output_dict_item)
 
             if is_show:
                 self.show_detection_result(image, output_dict_item)
 
+            if save_path_list is not None:
+                self.save_detection_result(image, output_dict_item, save_path_list[ix])
+
+        return output_dict_list
+
+    def run_inference_batch(self, image_path_list, image_size=224, is_filter=False, is_show=False, save_path_list=None):
+        '''
+        batch运行检测任务
+        :param image_path: 图片路径
+        :param is_show: 是否显示
+        :param save_path: 保存的路径
+        :return:
+        '''
+        assert save_path_list is None or len(image_path_list) == len(
+            save_path_list), "save_path_list length must equals to image_path_list"
+        image_lists = np.array([self.transfrom_input(img_path, image_size, image_size) for img_path in image_path_list])
+        output_dict_list = self.run_inference_batch(image_lists, is_filter, is_show, save_path_list)
+
+        output_dict_map = {}
+        for ix, output_dict in enumerate(output_dict_list):
+            image_id = os.path.split(image_path_list[ix])[-1].rsplit(".", 1)[0]
+            output_dict_map[image_id] = output_dict
         return output_dict_map
+
+    def filter_output_dict(self, output_dict, min_score_thresh=0.5):
+        '''
+        过滤检测结果，只保留分值在阈值（默认0.5）以上的检测框
+        :param output_dict:
+        :param min_score_thresh:
+        :return:
+        '''
+        filtered_output_dict = output_dict.copy()
+        boxes = output_dict['detection_boxes']
+        classes = output_dict['detection_classes']
+        scores = output_dict['detection_scores']
+        instance_masks = output_dict['detection_masks'] if "detection_masks" in output_dict else None
+
+        filtered_boxes = []
+        filtered_classes = []
+        filtered_scores = []
+        filtered_instance_masks = []
+
+        max_boxes_to_draw = boxes.shape[0]
+        for i in range(max_boxes_to_draw):
+            if scores[i] > min_score_thresh:
+                box = tuple(boxes[i].tolist())
+                filtered_boxes.append(box)
+                filtered_scores.append(scores[i])
+                if instance_masks is not None:
+                    filtered_instance_masks.append(instance_masks[i])
+                else:
+                    if classes[i] in self.category_index.keys():
+                        filtered_classes.append(classes[i])
+                    else:
+                        filtered_classes.append(-1)
+
+        filtered_output_dict["detection_boxes"] = filtered_boxes
+        filtered_output_dict["detection_classes"] = filtered_classes
+        filtered_output_dict["detection_scores"] = filtered_scores
+        filtered_output_dict["detection_masks"] = filtered_instance_masks
+        filtered_output_dict["num_detections"] = len(filtered_boxes)
+        return filtered_output_dict
 
 
 if __name__ == "__main__":
     # Path to frozen detection graph. This is the actual model that is used for the object detection.
-    PATH_TO_FROZEN_GRAPH = '/Users/rensike/Resources/models/tensorflow/object_detection/ssd_mobilenet_v1_coco_2017_11_17/frozen_inference_graph.pb'
+    PATH_TO_FROZEN_GRAPH = '/Users/rensike/Resources/models/tensorflow/object_detection/ssd_mobilenet_v1_voc/frozen_inference_graph.pb'
     # List of the strings that is used to add correct label for each box.
     PATH_TO_LABELS = os.path.join('data', 'mscoco_label_map.pbtxt')
 
     tf_obj_det = ObjectDetectionModel(PATH_TO_FROZEN_GRAPH, PATH_TO_LABELS)
 
     # inference single image
-    # TEST_IMAGE_PATH = "image1.jpg"
-    # tf_obj_det.run_inference(TEST_IMAGE_PATH, is_show=True, save_path=os.path.join("result", "image1_detected.jpg"))
-    # t0 = time.time()
+    TEST_IMAGE_PATH = "/Users/rensike/Files/temp/voc_mini/JPEGImages/2010_002537.jpg"
+    det_output = tf_obj_det.run_inference(TEST_IMAGE_PATH, is_filter=True, is_show=True)
+    # width,height = Image.open(TEST_IMAGE_PATH).size
+    # from draw import draw_bbox
+    # bbox_list = []
+    # label_list = []
+    # for i in range(det_output["num_detections"]):
+    #     bbox = det_output["detection_boxes"][i]
+    #     bbox_list.append([bbox[1]*width,bbox[0]*height,bbox[3]*width, bbox[2]*height])
+    #     label_list.append("-")
+    # draw_bbox.draw_bbox_use_pil(TEST_IMAGE_PATH,bbox_list,label_list,isShow=True)
+    print(det_output)
     # tf_obj_det.run_inference(TEST_IMAGE_PATH)
     # print("inference single image time consume is:", time.time() - t0)
 
     # inference batch image
-    TEST_IMAGE_LIST = glob.glob("images/*.jpg")
-    t0 = time.time()
-    tf_obj_det.run_inference_batch(TEST_IMAGE_LIST, is_show=False)
-    print("inference 16 images time consume is:", time.time() - t0)
+    # TEST_IMAGE_LIST = glob.glob("images/*.jpg")
+    # TEST_IMAGE_SAVE_LIST = [os.path.join("./result/images",os.path.split(img_path)[-1].rsplit(".",1)[0] + "_det_result.jpg") for img_path in TEST_IMAGE_LIST]
+    # t0 = time.time()
+    # tf_obj_det.run_inference_batch(TEST_IMAGE_LIST, is_show=False,save_path_list=TEST_IMAGE_SAVE_LIST)
+    # print("inference 16 images time consume is:", time.time() - t0)
+
+    # det_res = tf_obj_det.run_inference_batch(["image1.jpg", "image2.jpg"],is_filter=True, is_show=False)
+    # print(det_res)

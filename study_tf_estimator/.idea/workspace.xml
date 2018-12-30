@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29c3daea-6aaa-4547-a3a6-ded7e0cb8a14" name="Default Changelist" comment="" />
+    <list default="true" id="29c3daea-6aaa-4547-a3a6-ded7e0cb8a14" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../study_pascal_voc_coco/utils/pascal_voc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_tf_lite/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_tf_lite/export_frozen_model_to_tflite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_tf_object_det/draw/2009_000897.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_tf_object_det/draw/draw_bbox.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_tf_object_det/image2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_tf_object_det/usage/crop_image_detection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_tf_object_det/usage/detection_result_process.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_tf_object_det/utils/dataset_util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_tf_slim/output_names_map.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_pascal_voc_coco/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../study_pascal_voc_coco/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_pascal_voc_coco/create_pascal_tf_record.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../study_pascal_voc_coco/create_pascal_tf_record.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_pascal_voc_coco/dataset_convert/voc_to_coco.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_pascal_voc_coco/dataset_convert/voc_to_coco.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_pascal_voc_coco/utils/data_anna_load.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_pascal_voc_coco/utils/data_anna_load.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_tf_data/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../study_tf_data/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_tf_data/iterator_usage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_tf_data/iterator_usage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_tf_object_det/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../study_tf_object_det/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_tf_object_det/eval_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_tf_object_det/eval_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_tf_object_det/evaluation/voc_eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_tf_object_det/evaluation/voc_eval.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_tf_object_det/evaluation/voc_eval_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_tf_object_det/evaluation/voc_eval_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_tf_object_det/object_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_tf_object_det/object_detection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_tf_object_det/test_0.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_tf_object_det/test_0.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_tf_object_det/utils/image_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_tf_object_det/utils/image_util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_tf_object_det/utils/visualization_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_tf_object_det/utils/visualization_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_tf_slim/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../study_tf_slim/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +45,11 @@
     <session id="304826451">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.32" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -30,7 +59,7 @@
           <entry key="md" value="2" />
           <entry key="meta" value="1" />
           <entry key="pbtxt" value="1" />
-          <entry key="py" value="14" />
+          <entry key="py" value="15" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -38,7 +67,7 @@
         <counts>
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="8" />
-          <entry key="Python" value="14" />
+          <entry key="Python" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -59,31 +88,30 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/iris_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="552">
+              <caret line="59" column="25" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
               <folding>
                 <element signature="e#53#72#0" expanded="true" />
                 <marker date="1544084575894" expanded="true" signature="772:1113" ph="..." />
                 <marker date="1544084575894" expanded="true" signature="1180:1185" ph="..." />
                 <marker date="1544084575894" expanded="true" signature="1180:1694" ph="..." />
-                <marker date="1544084575894" expanded="true" signature="1180:1715" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="236">
-                <caret line="74" column="28" lean-forward="true" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/create_estimator_from_keras_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+              <folding>
+                <element signature="e#100#123#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,13 +119,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/premade_estimator_usage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+            <state relative-caret-position="453">
+              <caret line="70" column="45" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
               <folding>
                 <element signature="e#62#85#0" expanded="true" />
                 <marker date="1544085581434" expanded="true" signature="279:280" ph="..." />
                 <marker date="1544085581434" expanded="true" signature="279:284" ph="..." />
-                <marker date="1544085581434" expanded="true" signature="1341:2442" ph="..." />
               </folding>
             </state>
           </provider>
@@ -106,11 +133,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/estimator_custom.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1683">
-              <caret line="94" column="17" lean-forward="true" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-11">
+              <caret line="62" selection-start-line="62" selection-end-line="62" />
             </state>
           </provider>
         </entry>
@@ -118,8 +142,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/estimator_ckpt_restore.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-column="24" />
+            <state relative-caret-position="665">
+              <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
               <folding>
                 <element signature="e#45#68#0" expanded="true" />
               </folding>
@@ -130,8 +154,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/estimator_feature_columns.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-column="24" />
+            <state relative-caret-position="646">
+              <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -139,8 +163,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/estimator_dataset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="266">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -157,7 +181,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/tensorflow/python/feature_column/feature_column.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
+            <state relative-caret-position="27018">
               <caret line="1460" column="61" selection-start-line="1460" selection-start-column="59" selection-end-line="1460" selection-end-column="61" />
             </state>
           </provider>
@@ -166,8 +190,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/estimator_ckpt_save.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="946">
-              <caret line="56" column="21" lean-forward="true" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
+            <state relative-caret-position="342">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="e#44#67#0" expanded="true" />
               </folding>
@@ -187,7 +211,18 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>categorical_column</find>
+      <find>EstimatorSpec</find>
+      <find>hook</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -212,16 +247,18 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1400" />
-    <option name="y" value="63" />
-    <option name="width" value="1440" />
-    <option name="height" value="797" />
+    <option name="x" value="1440" />
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -233,7 +270,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -378,16 +414,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="23" width="1920" height="1057" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20931478" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.41331923" />
@@ -395,11 +426,17 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,16 +457,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
           <caret line="135" column="33" selection-start-line="135" selection-start-column="22" selection-end-line="135" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/create_estimator_from_keras_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-          <folding>
-            <element signature="e#100#123#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -468,30 +495,40 @@
     <entry file="file://$PROJECT_DIR$/data/iris_test.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/estimator_ckpt_save.py">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1406">
+            <caret line="74" column="28" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create_estimator_from_keras_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="946">
-          <caret line="56" column="21" lean-forward="true" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
+        <state relative-caret-position="570">
+          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
           <folding>
-            <element signature="e#44#67#0" expanded="true" />
+            <element signature="e#100#123#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/estimator_ckpt_restore.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="24" />
+        <state relative-caret-position="665">
+          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
           <folding>
             <element signature="e#45#68#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/tensorflow/python/feature_column/feature_column.py">
+    <entry file="file://$PROJECT_DIR$/estimator_feature_columns.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="1460" column="61" selection-start-line="1460" selection-start-column="59" selection-end-line="1460" selection-end-column="61" />
+        <state relative-caret-position="646">
+          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -502,64 +539,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/tensorflow/python/feature_column/feature_column.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27018">
+          <caret line="1460" column="61" selection-start-line="1460" selection-start-column="59" selection-end-line="1460" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/estimator_ckpt_save.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#44#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/iris_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="552">
+          <caret line="59" column="25" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
           <folding>
             <element signature="e#53#72#0" expanded="true" />
             <marker date="1544084575894" expanded="true" signature="772:1113" ph="..." />
             <marker date="1544084575894" expanded="true" signature="1180:1185" ph="..." />
             <marker date="1544084575894" expanded="true" signature="1180:1694" ph="..." />
-            <marker date="1544084575894" expanded="true" signature="1180:1715" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/estimator_feature_columns.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/premade_estimator_usage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        <state relative-caret-position="453">
+          <caret line="70" column="45" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
           <folding>
             <element signature="e#62#85#0" expanded="true" />
             <marker date="1544085581434" expanded="true" signature="279:280" ph="..." />
             <marker date="1544085581434" expanded="true" signature="279:284" ph="..." />
-            <marker date="1544085581434" expanded="true" signature="1341:2442" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="236">
-            <caret line="74" column="28" lean-forward="true" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/estimator_custom.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1683">
-          <caret line="94" column="17" lean-forward="true" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-11">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/estimator_dataset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="266">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>

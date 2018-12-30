@@ -16,13 +16,14 @@ def demo_one_shot_iterator():
     注意：目前，单次迭代器是唯一易于与 Estimator 搭配使用的类型！
     :return:
     '''
-    dataset = tf.data.Dataset.range(1000)
+    dataset = tf.data.Dataset.range(10)
     iterator = dataset.make_one_shot_iterator()
     next_element = iterator.get_next()
 
     with tf.Session() as sess:
         for i in range(100):
             value = sess.run(next_element)
+            print(value)
             assert i == value
 
 
@@ -145,7 +146,7 @@ def demo_can_feed_iterator():
 
 
 if __name__ == "__main__":
-    # demo_one_shot_iterator()
-    demo_can_init_iterator()
+    demo_one_shot_iterator()
+    # demo_can_init_iterator()
     # demo_can_re_init_iterator()
     # demo_can_feed_iterator()

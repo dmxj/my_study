@@ -22,3 +22,36 @@ def load_numpy_array_into_image(np_arr):
     '''
     im = Image.fromarray(np_arr.astype('uint8')).convert('RGB')
     return im
+
+def concat_images(image_path_list,is_show=False,save_path=None):
+    '''
+    将多张图横向拼接成一张图
+    :param image_path_list:
+    :param is_show:
+    :param save_path:
+    :return:
+    '''
+    ims = [Image.open(img_file) for img_file in image_path_list]
+
+    total_width = 0
+    max_height = 0
+
+    for im in ims:
+        width, height = im.size
+        total_width += width
+        if height > max_height:
+            max_height = height
+
+    result = Image.new(ims[0].mode, (total_width, max_height))
+
+    x = 0
+    for i, im in enumerate(ims):
+        width, height = im.size
+        result.paste(im, box=(x, 0))
+        x += width
+
+    if is_show:
+        result.show()
+
+    if save_path is not None:
+        result.save(save_path)

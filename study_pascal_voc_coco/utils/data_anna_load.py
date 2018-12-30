@@ -62,6 +62,14 @@ def load_pascal(data_dir,set,is_detect=True,is_seg=False):
 
     return pascal_ann_dict
 
+def load_pascal_single(anno_path,image_dir):
+    with open(anno_path, 'r') as fid:
+        xml_str = fid.read()
+    xml = etree.fromstring(xml_str)
+    data = dataset_util.recursive_parse_xml_to_dict(xml)['annotation']
+    data["img_path"] = os.path.join(image_dir, data['filename'])
+    return data
+
 if __name__ == "__main__":
     coco_ann = load_coco("../dataset/coco/annotations/instances_val.json","../dataset/coco/annotations/val")
     pprint.pprint(coco_ann)
