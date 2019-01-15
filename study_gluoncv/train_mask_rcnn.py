@@ -10,6 +10,7 @@ import mxnet as mx
 from mxnet import nd
 from mxnet import gluon
 from mxnet import autograd
+from mxnet.gluon.data.vision import transforms
 import gluoncv as gcv
 from gluoncv import data as gdata
 from gluoncv import utils as gutils
@@ -17,7 +18,8 @@ from gluoncv.model_zoo import get_model
 from gluoncv.data import batchify
 from gluoncv.data.transforms.presets.rcnn import MaskRCNNDefaultTrainTransform, MaskRCNNDefaultValTransform
 from gluoncv.utils.metrics.coco_instance import COCOInstanceMetric
-
+from gluoncv.utils.metrics.segmentation import SegmentationMetric
+from gluoncv.utils.metrics.voc_detection import VOCMApMetric
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Train Mask R-CNN network end to end.')
@@ -62,6 +64,8 @@ def parse_args():
     parser.add_argument('--seed', type=int, default=233,
                         help='Random seed to be fixed.')
     parser.add_argument('--verbose', dest='verbose', action='store_true',
+                        help='Print helpful debugging info once set.')
+    parser.add_argument('--data-dir', type=str, default='~/.mxnet/datasets/',
                         help='Print helpful debugging info once set.')
     args = parser.parse_args()
     args.epochs = int(args.epochs) if args.epochs else 26
@@ -202,6 +206,14 @@ def get_dataset(dataset, args):
         train_dataset = gdata.COCOInstance(splits='instances_train2017')
         val_dataset = gdata.COCOInstance(splits='instances_val2017', skip_empty=False)
         val_metric = COCOInstanceMetric(val_dataset, args.save_prefix + '_eval', cleanup=True)
+    elif dataset.lower == "voc":
+        input_transform = transforms.Compose([
+                                            transforms.ToTensor(),
+                                            transforms.Normalize([.485, .456, .406], [.229, .224, .225]),
+        ])
+        train_dataset = gdata.VOCSegmentation(split="train",root=args.data_dir,transform=input_transform)
+        val_dataset = gdata.VOCSegmentation(split="val",root=args.data_dir,transform=input_transform)
+        val_metric = SegmentationMetric(train_dataset.num_class)
     else:
         raise NotImplementedError('Dataset: {} not implemented.'.format(dataset))
     return train_dataset, val_dataset, val_metric

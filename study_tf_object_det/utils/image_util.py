@@ -23,15 +23,18 @@ def load_numpy_array_into_image(np_arr):
     im = Image.fromarray(np_arr.astype('uint8')).convert('RGB')
     return im
 
-def concat_images(image_path_list,is_show=False,save_path=None):
+def concat_images(image_list,is_show=False,save_path=None):
     '''
     将多张图横向拼接成一张图
-    :param image_path_list:
+    :param image_list: 图片路径列表或图片矩阵列表
     :param is_show:
     :param save_path:
     :return:
     '''
-    ims = [Image.open(img_file) for img_file in image_path_list]
+    if isinstance(image_list[0],str):
+        ims = [Image.open(img_file) for img_file in image_list]
+    else:
+        ims = image_list
 
     total_width = 0
     max_height = 0

@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8971d7ca-6c67-4908-8d47-099541b1da59" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/deeplab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/images/img0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/images/img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/images/img10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/images/img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/images/img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/images/img4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/images/img5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/images/img6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/images/img7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/images/img8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/images/img9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/utils/label_map_util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_gluoncv/eval_faster_rcnn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_gluoncv/eval_mask_rcnn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_gluoncv/predict_with_deeplab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_gluoncv/utils_vis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eval_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/predict_batch_inference.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/predict_with_faster_rcnn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/predict_with_mask_rcnn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/train_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trim_detectron_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trim_maskrcnn_benchmark_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_gluoncv/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../study_gluoncv/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_gluoncv/predict_with_faster_rcnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_gluoncv/predict_with_faster_rcnn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_gluoncv/predict_with_mask_rcnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_gluoncv/predict_with_mask_rcnn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_gluoncv/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_gluoncv/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_gluoncv/train_mask_rcnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_gluoncv/train_mask_rcnn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_pascal_voc_coco/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../study_pascal_voc_coco/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_pascal_voc_coco/create_pascal_tf_record.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_pascal_voc_coco/create_pascal_tf_record.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_pascal_voc_coco/create_pascal_tf_record.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../study_pascal_voc_coco/create_pascal_tf_record.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_pascal_voc_coco/utils/pascal_voc.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_pascal_voc_coco/utils/pascal_voc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_tf_object_det/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../study_tf_object_det/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_tf_object_det/.pytest_cache/v/cache/nodeids" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_tf_object_det/object_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_tf_object_det/object_detection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_tf_object_det/result/big_image_det_result2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_tf_object_det/usage/crop_image_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_tf_object_det/usage/crop_image_detection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_tf_object_det/usage/detection_result_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_tf_object_det/usage/detection_result_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_tf_object_det/utils/image_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_tf_object_det/utils/image_util.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/study_maskrcnn_benchmark$predict_with_faster_rcnn.coverage" NAME="predict_with_faster_rcnn Coverage Results" MODIFIED="1547448749131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/study_maskrcnn_benchmark$test.coverage" NAME="test Coverage Results" MODIFIED="1546915972938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/study_maskrcnn_benchmark$train_model.coverage" NAME="train_model Coverage Results" MODIFIED="1546917163434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/study_maskrcnn_benchmark$predict_batch_inference.coverage" NAME="predict_batch_inference Coverage Results" MODIFIED="1547448409202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/study_maskrcnn_benchmark$trim_maskrcnn_benchmark_model.coverage" NAME="trim_maskrcnn_benchmark_model Coverage Results" MODIFIED="1546932056189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/study_maskrcnn_benchmark$predict_with_mask_rcnn.coverage" NAME="predict_with_mask_rcnn Coverage Results" MODIFIED="1547447349414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/study_maskrcnn_benchmark$eval_with_faster_rcnn.coverage" NAME="eval_with_faster_rcnn Coverage Results" MODIFIED="1546860747306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1962777990">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="jpg" value="14" />
+          <entry key="md" value="1" />
+          <entry key="py" value="66" />
+          <entry key="txt" value="1" />
+          <entry key="yaml" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Image" value="14" />
+          <entry key="Markdown" value="1" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="66" />
+          <entry key="YAML" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="17" />
+          <entry key="md" value="12" />
+          <entry key="py" value="3003" />
+          <entry key="yaml" value="27" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Markdown" value="12" />
+          <entry key="PLAIN_TEXT" value="17" />
+          <entry key="Python" value="3003" />
+          <entry key="YAML" value="27" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/predict_batch_inference.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+              <folding>
+                <element signature="e#67#108#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/predictor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="152" selection-start-line="152" selection-end-line="152" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/results/img1_seg.jpg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/img1.jpg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/predict_with_faster_rcnn.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="38" column="61" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="61" />
+              <folding>
+                <element signature="e#53#94#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/predict_with_mask_rcnn.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="392">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>CATEGORIES</find>
+      <find>show</find>
+      <find>overlay_boxes</find>
+      <find>score</find>
+      <find>PATHS_CATALOG</find>
+      <find>EXPECTED_RESULTS</find>
+      <find>nproc_per_node</find>
+      <find>Start training</find>
+      <find>Total training</find>
+      <find>batches_outstanding</find>
+      <find>81</find>
+      <find>skip_test</find>
+      <find>reduce_loss_dict</find>
+      <find>meters</find>
+      <find>post_process</find>
+      <find>self.top_predictions</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/configs/e2e_mask_rcnn_R_50_FPN_1x_caffe2.yaml" />
+        <option value="$PROJECT_DIR$/eval_with_mask_rcnn.py" />
+        <option value="$PROJECT_DIR$/train_mask_rcnn.py" />
+        <option value="$PROJECT_DIR$/define_dataset.py" />
+        <option value="$PROJECT_DIR$/__init__.py" />
+        <option value="$PROJECT_DIR$/eval_with_faster_rcnn.py" />
+        <option value="$USER_HOME$/Files/OpenSource/maskrcnn-benchmark/maskrcnn_benchmark/engine/inference.py" />
+        <option value="$PROJECT_DIR$/train_faster_rcnn.py" />
+        <option value="$PROJECT_DIR$/configs/e2e_faster_rcnn_R_50_FPN_1x_caffe2.yaml" />
+        <option value="$USER_HOME$/Files/OpenSource/maskrcnn-benchmark/maskrcnn_benchmark/data/build.py" />
+        <option value="$USER_HOME$/Files/OpenSource/maskrcnn-benchmark/maskrcnn_benchmark/config/defaults.py" />
+        <option value="$PROJECT_DIR$/dataset.py" />
+        <option value="$USER_HOME$/Files/OpenSource/maskrcnn-benchmark/maskrcnn_benchmark/engine/trainer.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$USER_HOME$/Files/OpenSource/maskrcnn-benchmark/maskrcnn_benchmark/utils/metric_logger.py" />
+        <option value="$PROJECT_DIR$/train_model.py" />
+        <option value="$USER_HOME$/anaconda3/lib/python3.6/site-packages/torch/utils/data/dataloader.py" />
+        <option value="$PROJECT_DIR$/trim_detectron_model.py" />
+        <option value="$USER_HOME$/Files/OpenSource/dmxj/maskrcnn-benchmark/README.md" />
+        <option value="$PROJECT_DIR$/trim_maskrcnn_benchmark_model.py" />
+        <option value="$PROJECT_DIR$/predictor.py" />
+        <option value="$PROJECT_DIR$/predict_batch_inference.py" />
+        <option value="$PROJECT_DIR$/predict_with_faster_rcnn.py" />
+        <option value="$PROJECT_DIR$/predict_with_mask_rcnn.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1440" />
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="study_maskrcnn_benchmark" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study_maskrcnn_benchmark" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study_maskrcnn_benchmark" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study_maskrcnn_benchmark" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study_maskrcnn_benchmark" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study_maskrcnn_benchmark" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.predict_with_faster_rcnn">
+    <configuration name="predict_batch_inference" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="study_maskrcnn_benchmark" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/predict_batch_inference.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="predict_with_faster_rcnn" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="study_maskrcnn_benchmark" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/predict_with_faster_rcnn.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="predict_with_mask_rcnn" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="study_maskrcnn_benchmark" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/predict_with_mask_rcnn.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train_model" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="study_maskrcnn_benchmark" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train_model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="trim_maskrcnn_benchmark_model" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="study_maskrcnn_benchmark" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trim_maskrcnn_benchmark_model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.train_model" />
+      <item itemvalue="Python.trim_maskrcnn_benchmark_model" />
+      <item itemvalue="Python.predict_batch_inference" />
+      <item itemvalue="Python.predict_with_mask_rcnn" />
+      <item itemvalue="Python.predict_with_faster_rcnn" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.predict_with_faster_rcnn" />
+        <item itemvalue="Python.predict_batch_inference" />
+        <item itemvalue="Python.predict_with_mask_rcnn" />
+        <item itemvalue="Python.trim_maskrcnn_benchmark_model" />
+        <item itemvalue="Python.train_model" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8971d7ca-6c67-4908-8d47-099541b1da59" name="Default Changelist" comment="" />
+      <created>1546849349260</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1546849349260</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1440" y="23" width="1920" height="1057" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49786323" visible="true" weight="0.23286937" />
+      <window_info id="Structure" order="1" sideWeight="0.50213677" side_tool="true" weight="0.19020173" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40169132" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.25267667" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/Files/OpenSource/maskrcnn-benchmark/maskrcnn_benchmark/modeling/detector/detectors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/img3_seg.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train_mask_rcnn.py" />
+    <entry file="file://$USER_HOME$/Files/OpenSource/maskrcnn-benchmark/maskrcnn_benchmark/utils/comm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/pycocotools/coco.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/torchvision/datasets/coco.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-21">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Files/OpenSource/maskrcnn-benchmark/maskrcnn_benchmark/data/datasets/coco.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-80">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Files/OpenSource/maskrcnn-benchmark/maskrcnn_benchmark/utils/imports.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1">
+          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Files/OpenSource/maskrcnn-benchmark/maskrcnn_benchmark/config/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Files/OpenSource/maskrcnn-benchmark/maskrcnn_benchmark/data/datasets/evaluation/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Files/OpenSource/maskrcnn-benchmark/maskrcnn_benchmark/data/datasets/evaluation/voc/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Files/OpenSource/maskrcnn-benchmark/maskrcnn_benchmark/data/datasets/evaluation/voc/voc_eval.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eval_with_mask_rcnn.py" />
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/yacs/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="170" selection-start-line="170" selection-end-line="170" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/e2e_mask_rcnn_R_50_FPN_1x_caffe2.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="33" column="11" lean-forward="true" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Files/OpenSource/maskrcnn-benchmark/maskrcnn_benchmark/data/build.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="162" column="48" selection-start-line="162" selection-start-column="26" selection-end-line="162" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/python_stubs/-1821537435/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="323" column="4" selection-start-line="323" selection-start-column="4" selection-end-line="323" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/torch/utils/data/dataloader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="633" column="41" lean-forward="true" selection-start-line="633" selection-start-column="41" selection-end-line="633" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="8665" column="24" selection-start-line="8665" selection-start-column="24" selection-end-line="8665" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Files/OpenSource/maskrcnn-benchmark/maskrcnn_benchmark/config/paths_catalog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="107" column="49" lean-forward="true" selection-start-line="107" selection-start-column="49" selection-end-line="107" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/torch/serialization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-90">
+          <caret line="299" column="24" selection-start-line="299" selection-start-column="12" selection-end-line="299" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trim_detectron_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trim_maskrcnn_benchmark_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Files/OpenSource/dmxj/maskrcnn-benchmark/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SECOND">
+          <first_editor relative-caret-position="344">
+            <caret line="214" column="36" selection-start-line="214" selection-start-column="36" selection-end-line="214" selection-end-column="36" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Files/OpenSource/maskrcnn-benchmark/maskrcnn_benchmark/config/defaults.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="260" column="29" lean-forward="true" selection-start-line="260" selection-start-column="29" selection-end-line="260" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Files/OpenSource/maskrcnn-benchmark/maskrcnn_benchmark/engine/trainer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1501">
+          <caret line="88" column="18" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="18" />
+          <folding>
+            <element signature="e#72#87#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#0#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Files/OpenSource/maskrcnn-benchmark/maskrcnn_benchmark/utils/metric_logger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="99" selection-start-line="99" selection-end-line="99" />
+          <folding>
+            <element signature="e#72#107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/torchvision/transforms/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/e2e_faster_rcnn_R_50_FPN_1x_caffe2.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Files/OpenSource/maskrcnn-benchmark/maskrcnn_benchmark/engine/inference.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="58" column="23" lean-forward="true" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Files/OpenSource/maskrcnn-benchmark/maskrcnn_benchmark/structures/image_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="58" column="38" lean-forward="true" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eval_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="70" column="40" lean-forward="true" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/img2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/img0.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/img0_det.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/img1_seg.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/img1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/img2_det.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/predict_with_faster_rcnn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="38" column="61" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="61" />
+          <folding>
+            <element signature="e#53#94#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/predict_with_mask_rcnn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/predict_batch_inference.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+          <folding>
+            <element signature="e#67#108#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/predictor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="152" selection-start-line="152" selection-end-line="152" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -108,7 +108,7 @@ class ObjectDetectionModel(object):
         image_np = image_util.load_image_into_numpy_array(image)
         return image_np
 
-    def show_detection_result(self, image_np, output_dict):
+    def show_detection_result(self, image_np, output_dict, is_show=False):
         '''
         显示检测的结果
         :param image_np:
@@ -128,7 +128,9 @@ class ObjectDetectionModel(object):
             use_normalized_coordinates=True,
             line_thickness=8)
         image_drawed = image_util.load_numpy_array_into_image(image_np)
-        image_drawed.show()
+        if is_show:
+            image_drawed.show()
+        return image_drawed
 
     def save_detection_result(self, image_np, output_dict, save_path):
         '''
@@ -169,8 +171,8 @@ class ObjectDetectionModel(object):
         if 'detection_masks' in output_dict:
             output_dict['detection_masks'] = output_dict['detection_masks'][0]
 
-        if is_show:
-            self.show_detection_result(image_np, output_dict)
+        image_drawed = self.show_detection_result(image_np, output_dict,is_show=is_show)
+        output_dict["detection_image_drawed"] = image_drawed
 
         if save_path is not None:
             self.save_detection_result(image_np, output_dict, save_path)
@@ -260,11 +262,10 @@ class ObjectDetectionModel(object):
                 filtered_scores.append(scores[i])
                 if instance_masks is not None:
                     filtered_instance_masks.append(instance_masks[i])
+                if classes[i] in self.category_index.keys():
+                    filtered_classes.append(classes[i])
                 else:
-                    if classes[i] in self.category_index.keys():
-                        filtered_classes.append(classes[i])
-                    else:
-                        filtered_classes.append(-1)
+                    filtered_classes.append(-1)
 
         filtered_output_dict["detection_boxes"] = filtered_boxes
         filtered_output_dict["detection_classes"] = filtered_classes
@@ -276,15 +277,16 @@ class ObjectDetectionModel(object):
 
 if __name__ == "__main__":
     # Path to frozen detection graph. This is the actual model that is used for the object detection.
-    PATH_TO_FROZEN_GRAPH = '/Users/rensike/Resources/models/tensorflow/object_detection/ssd_mobilenet_v1_voc/frozen_inference_graph.pb'
+    PATH_TO_FROZEN_GRAPH = '/Users/rensike/Resources/models/tensorflow/object_detection/ssd_resnet50_v1_fpn_shared_box_predictor_640x640_coco14_sync_2018_07_03/frozen_inference_graph.pb'
     # List of the strings that is used to add correct label for each box.
     PATH_TO_LABELS = os.path.join('data', 'mscoco_label_map.pbtxt')
 
     tf_obj_det = ObjectDetectionModel(PATH_TO_FROZEN_GRAPH, PATH_TO_LABELS)
 
     # inference single image
-    TEST_IMAGE_PATH = "/Users/rensike/Files/temp/voc_mini/JPEGImages/2010_002537.jpg"
+    TEST_IMAGE_PATH = "/Users/rensike/Files/data/coco/coco2017/images/test2017/000000000057.jpg"
     det_output = tf_obj_det.run_inference(TEST_IMAGE_PATH, is_filter=True, is_show=True)
+    print(det_output)
     # width,height = Image.open(TEST_IMAGE_PATH).size
     # from draw import draw_bbox
     # bbox_list = []
@@ -294,7 +296,7 @@ if __name__ == "__main__":
     #     bbox_list.append([bbox[1]*width,bbox[0]*height,bbox[3]*width, bbox[2]*height])
     #     label_list.append("-")
     # draw_bbox.draw_bbox_use_pil(TEST_IMAGE_PATH,bbox_list,label_list,isShow=True)
-    print(det_output)
+    # print(det_output)
     # tf_obj_det.run_inference(TEST_IMAGE_PATH)
     # print("inference single image time consume is:", time.time() - t0)
 

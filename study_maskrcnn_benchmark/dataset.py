@@ -1,0 +1,4 @@
+
+import maskrcnn_benchmark.config.paths_catalog as paths_catalog
+
+import maskrcnn_benchmark.utils.metric_logger

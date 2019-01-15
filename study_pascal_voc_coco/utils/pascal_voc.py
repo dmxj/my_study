@@ -183,10 +183,8 @@ if __name__ == '__main__':
     area = cv2.contourArea(contours[0])
     print("2-面积等于:",area)
 
+    show_mask(img_path,polygons)
 
-
-    # show_mask(img_path,polygons)
-
-    # mask2 = polygons_to_mask(cv2.imread(img_path).shape,[polygons])
-    # print("get mask from polygons is:",mask2)
+    mask2 = polygons_to_mask(cv2.imread(img_path).shape,[polygons])
+    print("get mask from polygons is:",mask2)
 

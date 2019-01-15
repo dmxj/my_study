@@ -9,18 +9,19 @@ from PIL import Image
 from utils import image_util
 from utils import visualization_utils as vis_util
 from object_detection import ObjectDetectionModel
+import cv2
 
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
-PATH_TO_FROZEN_GRAPH = '/Users/rensike/Resources/models/tensorflow/object_detection/ssd_mobilenet_v1_voc/frozen_inference_graph.pb'
+PATH_TO_FROZEN_GRAPH = '/Users/rensike/Resources/models/tensorflow/object_detection/ssd_mobilenet_v1_coco_2017_11_17/frozen_inference_graph.pb'
 # List of the strings that is used to add correct label for each box.
-PATH_TO_LABELS = os.path.join('../data', 'pascal_label_map.pbtxt')
+PATH_TO_LABELS = os.path.join('../data', 'mscoco_label_map.pbtxt')
 
 # 测试大图片预测的效果和时间
 def test_big_image_infer(image_path):
     tf_obj_det = ObjectDetectionModel(PATH_TO_FROZEN_GRAPH, PATH_TO_LABELS)
     t0 = time.time()
-    outdict = tf_obj_det.run_inference(image_path,save_path="../result/big_image_det_result2.jpg")
-    print(outdict)
+    image_np = cv2.imread(image_path)
+    outdict = tf_obj_det.inference_image_np(image_np,save_path="../result/big_image_det_result2.jpg")
     print("detect cost time: ",time.time() - t0)
 
 # 大图裁剪成小图
@@ -68,24 +69,32 @@ def crop_image_detect(image_path,save_path):
 
     print("finish inference.")
 
+    det_boxes = np.vstack([output_dict['detection_boxes']*[crop_height,crop_width,crop_height,crop_width]+[sub_image_xy[1],sub_image_xy[0],sub_image_xy[1],sub_image_xy[0]] for sub_image_xy,output_dict in list(zip(sub_image_xy_list,output_dict_list))])
+    det_classes = np.vstack([output_dict['detection_classes'] for output_dict in output_dict_list]).reshape(-1)
+    det_scores = np.vstack([output_dict['detection_scores'] for output_dict in output_dict_list]).reshape(-1)
+
     vis_util.visualize_boxes_and_labels_on_image_array(
         image_np,
-        np.vstack([output_dict['detection_boxes'] for output_dict in output_dict_list]),
-        np.vstack([output_dict['detection_classes'] for output_dict in output_dict_list]),
-        np.vstack([output_dict['detection_scores'] for output_dict in output_dict_list]),
+        det_boxes,
+        det_classes,
+        det_scores,
         tf_obj_det.category_index,
         instance_masks=np.vstack([output_dict['detection_masks'] for output_dict in output_dict_list]),
         use_normalized_coordinates=False,
+        max_boxes_to_draw=False,
         line_thickness=8)
     image_drawed = image_util.load_numpy_array_into_image(image_np)
     image_drawed.save(save_path)
     print("process done,cost time: ",time.time() - t0)
 
 if __name__ == '__main__':
-    image_path = "/Users/rensike/Files/work/tf_object_detect/big_image.jpeg"
+    # image_path = "/Users/rensike/Files/work/20suo/1528701402.01_1.jpg"
+    image_path = "/Users/rensike/Files/temp/test_airplane.jpg"
+
+    # image_path = "/Users/rensike/Files/work/tf_object_detect/big_image.jpeg"
     # image_path = "/Users/rensike/Files/temp/voc_mini/JPEGImages/2010_002537.jpg"
-    # test_big_image_infer(image_path)
-    crop_image_detect(image_path,"../result/crop_image_det_result.jpg")
+    test_big_image_infer(image_path)
+    # crop_image_detect(image_path,"../result/crop_image_det_result.jpg")
 
     # image = Image.open(image_path)
     # image_np = image_util.load_image_into_numpy_array(image)

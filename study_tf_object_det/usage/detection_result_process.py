@@ -33,7 +33,7 @@ class DetectionResultProcess(object):
         anno_data = dataset_util.recursive_parse_xml_to_dict(xml)['annotation']
         return anno_data
 
-    def _draw_and_save_ground_truth(self, image_path, anno_path, save_path):
+    def _draw_and_save_ground_truth(self, image_path, anno_path, save_path=None):
         '''
         将groung truth的框进行绘制和保存
         :param image_path:
@@ -64,7 +64,9 @@ class DetectionResultProcess(object):
             use_normalized_coordinates=False,
             line_thickness=8)
         image_drawed = image_util.load_numpy_array_into_image(image_np)
-        image_drawed.save(save_path)
+        if save_path is not None:
+            image_drawed.save(save_path)
+        return image_drawed
 
     def _calc_single_sample_det_info(self, ground_bbox_list, det_bbox_list, iou_threshold=0.5):
         '''
@@ -86,18 +88,22 @@ class DetectionResultProcess(object):
         tp = 0
         gt_over_map = {}
         det_over_map = {}
+        gt_iou_list = []
         for i in range(len(ground_bbox_list)):
             if i in gt_over_map:
                 continue
-            max_iou = 0
             max_j = -1
+            max_iou = 0
+            gt_iou = 0
             for j in range(len(det_bbox_list)):
                 if j in det_over_map:
                     continue
+                if iou_mat[i, j] > gt_iou:
+                    gt_iou = iou_mat[i, j]
                 if iou_mat[i, j] >= iou_threshold and iou_mat[i,j] > max_iou:
                     max_iou = iou_mat[i,j]
                     max_j = j
-
+            gt_iou_list.append(gt_iou)
             if max_j >= 0:
                 tp += 1
                 gt_over_map[i] = True
@@ -109,7 +115,7 @@ class DetectionResultProcess(object):
         # ground truth的框，没检测到的，即过杀（漏警）的框，FN
         fn = len(ground_bbox_list) - tp
 
-        return tp, fp, fn
+        return tp, fp, fn, gt_iou_list
 
     def calc_det_info(self, image_path_list, anno_path_list, save_path=None):
         '''
@@ -138,7 +144,7 @@ class DetectionResultProcess(object):
                  int(obj["bndbox"]["xmin"]),
                  int(obj["bndbox"]["ymax"]),
                  int(obj["bndbox"]["xmax"])] for obj in anno_data["object"]]
-            tp, fp, fn = self._calc_single_sample_det_info(ground_bbox_list, det_bbox_list)
+            tp, fp, fn, _ = self._calc_single_sample_det_info(ground_bbox_list, det_bbox_list)
             tp_total += tp
             fp_total += fp
             fn_total += fn
@@ -262,8 +268,9 @@ class DetectionResultProcess(object):
     def make_vis_result(self, image_path_list, anno_path_list, save_path):
         '''
         保存检测结果，以及ground truth和检测结果的拼接对比图片
-        :param image_path_list:
-        :param save_path:
+        :param image_path_list: 待检测图片路径列表
+        :param anno_path_list: 图片ground truth的标准文件列表，和image_path_list一一对应
+        :param save_path: 保存路径
         :return:
         '''
         assert len(image_path_list) == len(
@@ -313,6 +320,67 @@ class DetectionResultProcess(object):
 
         print("make ground truth and detect result compare vis finish.")
 
+    def collect_bad_samples(self,image_path_list,anno_path_list,save_path,iou_threshold=0.7,over_det_cnt=1,miss_det_cnt=1):
+        '''
+        根据平均IOU阈值、过检数、漏检数来筛选坏样本，绘制并保存结果列表文件
+        :param image_path_list: 待检测图片路径列表
+        :param anno_path_list: 图片ground truth的标准文件列表，和image_path_list一一对应
+        :param save_path: 保存结果的路径
+        :param iou_threshold: 阈值
+        :param over_det_cnt: 最少过检数
+        :param miss_det_cnt: 最少漏检数
+        :return:
+        '''
+        assert len(image_path_list) == len(
+            anno_path_list), "anno path list length should be equal to image path list length"
+        compare_result_path = os.path.join(save_path, "compare_result")
+        bad_samples_path = os.path.join(save_path, "bad_samples.txt")
+        bad_image_copy_path = os.path.join(save_path, "bad_images")
+
+        if os.path.exists(compare_result_path):
+            shutil.rmtree(compare_result_path)
+
+        if os.path.exists(bad_image_copy_path):
+            shutil.rmtree(bad_image_copy_path)
+
+        os.makedirs(compare_result_path)
+        os.makedirs(bad_image_copy_path)
+
+        bad_samples_list = []
+        for (image_path, anno_path) in list(zip(image_path_list, anno_path_list)):
+            width, height = Image.open(image_path).size
+            det_output_dict = self.tf_obj_det.run_inference(image_path, is_filter=True)
+            det_bbox_list = det_output_dict["detection_boxes"]
+            det_bbox_list = [[bbox[0] * height, bbox[1] * width, bbox[2] * height, bbox[3] * width] for bbox in
+                             det_bbox_list]
+            anno_data = self._load_anno_sample(anno_path)
+            ground_bbox_list = [
+                [int(obj["bndbox"]["ymin"]),
+                 int(obj["bndbox"]["xmin"]),
+                 int(obj["bndbox"]["ymax"]),
+                 int(obj["bndbox"]["xmax"])] for obj in anno_data["object"]]
+            tp, fp, fn, gt_iou_list = self._calc_single_sample_det_info(ground_bbox_list, det_bbox_list)
+            avg_iou = sum(gt_iou_list)*1.0/len(gt_iou_list)
+
+            if avg_iou <= iou_threshold or fp >= over_det_cnt or fn >= miss_det_cnt :
+                image_gt_pil = self._draw_and_save_ground_truth(image_path,anno_path)
+                image_det_pil = det_output_dict["detection_image_drawed"]
+                image_filename = os.path.split(image_path)[-1]
+                image_name, image_suffix = image_filename.rsplit(".", 1)
+                image_compare_filepath = os.path.join(compare_result_path,
+                                                      image_name + "_gt_and_det" + "." + image_suffix)
+                image_util.concat_images([image_gt_pil, image_det_pil], is_show=False,
+                                         save_path=image_compare_filepath)
+                bad_samples_list.append([image_path,str(avg_iou),str(fp),str(fn)])
+                shutil.copyfile(image_path,os.path.join(bad_image_copy_path,image_filename))
+
+        print("find {} nums bad samples".format(len(bad_samples_list)))
+        with open(bad_samples_path,"w+") as fw:
+            fw.write("image_path,average_iou,over_det_cnt,miss_det_cnt\n")
+            fw.write("\n".join([",".join(sample) for sample in bad_samples_list]) + "\n")
+
+        print("collect bad samples done.")
+
     def test(self,image_path,anno_path):
         anno_data = self._load_anno_sample(anno_path)
         width,height = Image.open(image_path).size
@@ -326,7 +394,7 @@ class DetectionResultProcess(object):
              int(obj["bndbox"]["xmin"]),
              int(obj["bndbox"]["ymax"]),
              int(obj["bndbox"]["xmax"])] for obj in anno_data["object"]]
-        tp, fp, fn = self._calc_single_sample_det_info(ground_bbox_list, det_bbox_list)
+        tp, fp, fn, _ = self._calc_single_sample_det_info(ground_bbox_list, det_bbox_list)
         print(tp)
         print(fp)
         print(fn)
@@ -358,4 +426,12 @@ if __name__ == '__main__':
     # det_result_process.calc_det_info(image_path_list, anno_path_list,
     #                                  "/Users/rensike/Files/temp/det_process_result/det_info.txt")
 
-    det_result_process.make_evaluation(image_path_list,anno_path_list,"/Users/rensike/Files/temp/det_process_result/evaluation.txt")
+    # det_result_process.make_evaluation(image_path_list,anno_path_list,"/Users/rensike/Files/temp/det_process_result/evaluation.txt")
+
+    import random
+    start_ix = random.randint(0,len(image_list) - 20)
+    image_path_list = image_path_list[start_ix:start_ix+20]
+    anno_path_list = anno_path_list[start_ix:start_ix+20]
+
+    det_result_process.collect_bad_samples(image_path_list,anno_path_list,"/Users/rensike/Files/temp/det_process_result_bad_samples/")
+

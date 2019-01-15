@@ -2,33 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3dad9fd4-08ac-43c8-ad54-783754eff14d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../study_pascal_voc_coco/utils/pascal_voc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../study_tf_lite/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../study_tf_lite/export_frozen_model_to_tflite.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/draw/2009_000897.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/draw/draw_bbox.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usage/crop_image_detection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usage/detection_result_process.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/dataset_util.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../study_tf_slim/output_names_map.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/deeplab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/images/img0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/images/img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/images/img10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/images/img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/images/img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/images/img4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/images/img5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/images/img6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/images/img7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/images/img8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/images/img9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_deeplab_v3plus/utils/label_map_util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_gluoncv/eval_faster_rcnn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_gluoncv/eval_mask_rcnn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_gluoncv/predict_with_deeplab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_gluoncv/utils_vis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_maskrcnn_benchmark/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_maskrcnn_benchmark/dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_maskrcnn_benchmark/eval_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_maskrcnn_benchmark/predict_batch_inference.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_maskrcnn_benchmark/predict_with_faster_rcnn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_maskrcnn_benchmark/predict_with_mask_rcnn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_maskrcnn_benchmark/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_maskrcnn_benchmark/train_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_maskrcnn_benchmark/trim_detectron_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../study_maskrcnn_benchmark/trim_maskrcnn_benchmark_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_gluoncv/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../study_gluoncv/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_gluoncv/predict_with_faster_rcnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_gluoncv/predict_with_faster_rcnn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_gluoncv/predict_with_mask_rcnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_gluoncv/predict_with_mask_rcnn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_gluoncv/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_gluoncv/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_gluoncv/train_mask_rcnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_gluoncv/train_mask_rcnn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../study_pascal_voc_coco/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../study_pascal_voc_coco/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../study_pascal_voc_coco/create_pascal_tf_record.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_pascal_voc_coco/create_pascal_tf_record.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../study_pascal_voc_coco/create_pascal_tf_record.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../study_pascal_voc_coco/create_pascal_tf_record.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../study_pascal_voc_coco/dataset_convert/voc_to_coco.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_pascal_voc_coco/dataset_convert/voc_to_coco.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../study_pascal_voc_coco/utils/data_anna_load.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_pascal_voc_coco/utils/data_anna_load.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../study_tf_data/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../study_tf_data/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../study_tf_data/iterator_usage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_tf_data/iterator_usage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../study_tf_estimator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../study_tf_estimator/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_pascal_voc_coco/utils/pascal_voc.py" beforeDir="false" afterPath="$PROJECT_DIR$/../study_pascal_voc_coco/utils/pascal_voc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eval_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/eval_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluation/voc_eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluation/voc_eval.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluation/voc_eval_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluation/voc_eval_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pytest_cache/v/cache/nodeids" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/object_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/object_detection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_0.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_0.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/big_image_det_result2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/usage/crop_image_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/usage/crop_image_detection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usage/detection_result_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/usage/detection_result_process.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/image_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/image_util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/visualization_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/visualization_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../study_tf_slim/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../study_tf_slim/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,13 +56,13 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/study_tf_object_det$draw_bbox.coverage" NAME="draw_bbox Coverage Results" MODIFIED="1545716554341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/draw" />
-    <SUITE FILE_PATH="coverage/study_tf_object_det$crop_image_detection.coverage" NAME="crop_image_detection Coverage Results" MODIFIED="1546158203225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/usage" />
+    <SUITE FILE_PATH="coverage/study_tf_object_det$crop_image_detection.coverage" NAME="crop_image_detection Coverage Results" MODIFIED="1546509706897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/usage" />
     <SUITE FILE_PATH="coverage/study_tf_object_det$eval.coverage" NAME="eval Coverage Results" MODIFIED="1545795119506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/study_tf_object_det$voc_eval_test__1_.coverage" NAME="voc_eval_test (1) Coverage Results" MODIFIED="1545716622917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evaluation" />
-    <SUITE FILE_PATH="coverage/study_tf_object_det$object_detection.coverage" NAME="object_detection Coverage Results" MODIFIED="1545718147440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/study_tf_object_det$object_detection.coverage" NAME="object_detection Coverage Results" MODIFIED="1547454935366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/study_tf_object_det$test_0.coverage" NAME="test_0 Coverage Results" MODIFIED="1545969616055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/study_tf_object_det$eval_test.coverage" NAME="eval_test Coverage Results" MODIFIED="1545816094570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/study_tf_object_det$detection_result_process.coverage" NAME="detection_result_process Coverage Results" MODIFIED="1545816247449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/usage" />
+    <SUITE FILE_PATH="coverage/study_tf_object_det$detection_result_process.coverage" NAME="detection_result_process Coverage Results" MODIFIED="1547108902893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/usage" />
     <SUITE FILE_PATH="coverage/study_tf_object_det$infer_simple.coverage" NAME="infer_simple Coverage Results" MODIFIED="1542791714668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/study_tf_object_det$test.coverage" NAME="test Coverage Results" MODIFIED="1542860621348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/study_tf_object_det$pytest_in_test_0_py.coverage" NAME="pytest in test_0.py Coverage Results" MODIFIED="1545814479508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -60,21 +78,24 @@
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.58" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="config" value="2" />
-          <entry key="jpg" value="28" />
+          <entry key="jpg" value="31" />
           <entry key="json" value="2" />
           <entry key="md" value="1" />
-          <entry key="pbtxt" value="4" />
-          <entry key="py" value="93" />
+          <entry key="pbtxt" value="5" />
+          <entry key="py" value="108" />
           <entry key="sh" value="10" />
           <entry key="txt" value="1" />
         </counts>
@@ -82,18 +103,18 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Bash" value="7" />
-          <entry key="Image" value="28" />
+          <entry key="Image" value="31" />
           <entry key="JSON" value="2" />
           <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="10" />
-          <entry key="Python" value="93" />
+          <entry key="PLAIN_TEXT" value="11" />
+          <entry key="Python" value="108" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="16" />
           <entry key="md" value="351" />
-          <entry key="py" value="16186" />
+          <entry key="py" value="17595" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -101,7 +122,7 @@
         <counts>
           <entry key="Markdown" value="351" />
           <entry key="PLAIN_TEXT" value="17" />
-          <entry key="Python" value="16186" />
+          <entry key="Python" value="17595" />
         </counts>
       </usages-collector>
     </session>
@@ -109,19 +130,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/image_util.py">
+        <entry file="file://$PROJECT_DIR$/usage/detection_result_process.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="3496">
+              <caret line="196" column="32" selection-start-line="196" selection-start-column="32" selection-end-line="196" selection-end-column="32" />
+              <folding>
+                <element signature="e#43#52#0" expanded="true" />
+                <marker date="1547108880244" expanded="true" signature="445:450" ph="..." />
+                <marker date="1547108880244" expanded="true" signature="7476:12581" ph="..." />
+                <marker date="1547108880244" expanded="true" signature="15287:18429" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/eval_model.sh">
+        <entry file="file://$PROJECT_DIR$/utils/object_detection_evaluation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="54" selection-start-line="1" selection-start-column="54" selection-end-line="1" selection-end-column="54" />
+            <state relative-caret-position="6916">
+              <caret line="374" selection-start-line="374" selection-end-line="374" />
+              <folding>
+                <element signature="e#1315#1338#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,48 +159,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/visualization_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="150" column="33" selection-start-line="150" selection-start-column="7" selection-end-line="150" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/usage/detection_result_process.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="79" column="35" lean-forward="true" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
-              <folding>
-                <element signature="e#43#52#0" expanded="true" />
-                <marker date="1545816621833" expanded="true" signature="445:450" ph="..." />
-                <marker date="1545816621833" expanded="true" signature="7217:12322" ph="..." />
-              </folding>
+            <state relative-caret-position="396">
+              <caret line="657" column="16" selection-start-line="657" selection-start-column="16" selection-end-line="657" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/usage/crop_image_detection.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="65" column="50" lean-forward="true" selection-start-line="65" selection-start-column="50" selection-end-line="65" selection-end-column="50" />
-              <folding>
-                <element signature="e#79#88#0" expanded="true" />
-                <marker date="1546158274695" expanded="true" signature="2452:3548" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/object_detection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="186" column="11" lean-forward="true" selection-start-line="186" selection-start-column="11" selection-end-line="186" selection-end-column="11" />
-              <folding>
-                <marker date="1546157233081" expanded="true" signature="6345:7419" ph="..." />
-                <marker date="1546157233081" expanded="true" signature="7888:9204" ph="..." />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="284" selection-start-line="284" selection-end-line="284" />
             </state>
           </provider>
         </entry>
@@ -204,6 +203,13 @@
       <find>tvmonitor</find>
       <find>num_class</find>
       <find>glob</find>
+      <find>_draw_and_save_ground_truth</find>
+      <find>vis_util</find>
+      <find>print</find>
+      <find>Segmentation</find>
+      <find>PascalInstanceSegmentationEvaluator</find>
+      <find>_calc_single_sample_det_info</find>
+      <find>zip</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/utils</dir>
@@ -239,14 +245,14 @@
         <option value="$PROJECT_DIR$/evaluation/voc_eval.py" />
         <option value="$PROJECT_DIR$/draw/draw_bbox.py" />
         <option value="$PROJECT_DIR$/evaluation/voc_eval_test.py" />
-        <option value="$PROJECT_DIR$/utils/image_util.py" />
         <option value="$PROJECT_DIR$/utils/visualization_utils.py" />
         <option value="$PROJECT_DIR$/eval_test.py" />
-        <option value="$PROJECT_DIR$/usage/detection_result_process.py" />
         <option value="$PROJECT_DIR$/utils/object_detection_evaluation.py" />
         <option value="$PROJECT_DIR$/test_0.py" />
-        <option value="$PROJECT_DIR$/object_detection.py" />
         <option value="$PROJECT_DIR$/usage/crop_image_detection.py" />
+        <option value="$PROJECT_DIR$/utils/image_util.py" />
+        <option value="$PROJECT_DIR$/usage/detection_result_process.py" />
+        <option value="$PROJECT_DIR$/object_detection.py" />
       </list>
     </option>
   </component>
@@ -257,7 +263,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
+    <option name="x" value="1440" />
+    <option name="y" value="63" />
     <option name="width" value="1440" />
     <option name="height" value="797" />
   </component>
@@ -267,7 +274,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -275,10 +281,16 @@
               <item name="study_tf_object_det" type="b2602c69:ProjectViewProjectNode" />
               <item name="study_tf_object_det" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="study_tf_object_det" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study_tf_object_det" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -309,7 +321,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.crop_image_detection">
+  <component name="RunManager" selected="Python.object_detection">
     <configuration name="crop_image_detection" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="study_tf_object_det" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -376,6 +388,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="object_detection" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="study_tf_object_det" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/object_detection.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test_0" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="study_tf_object_det" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -398,36 +432,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in test_0.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="study_tf_object_det" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_0.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.detection_result_process" />
       <item itemvalue="Python.eval_test" />
-      <item itemvalue="Python tests.pytest in test_0.py" />
       <item itemvalue="Python.test_0" />
       <item itemvalue="Python.crop_image_detection" />
+      <item itemvalue="Python.object_detection" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.object_detection" />
+        <item itemvalue="Python.detection_result_process" />
         <item itemvalue="Python.crop_image_detection" />
         <item itemvalue="Python.test_0" />
-        <item itemvalue="Python.detection_result_process" />
         <item itemvalue="Python.eval_test" />
-        <item itemvalue="Python tests.pytest in test_0.py" />
       </list>
     </recent_temporary>
   </component>
@@ -456,14 +474,14 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="797" extended-state="6" />
+    <frame x="1440" y="23" width="1920" height="1057" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5140562" visible="true" weight="0.19668588" />
-      <window_info id="Structure" order="1" sideWeight="0.48594376" side_tool="true" weight="0.19524495" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.51244813" visible="true" weight="0.1627409" />
+      <window_info id="Structure" order="1" sideWeight="0.48755187" side_tool="true" weight="0.17507204" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41982508" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.36575052" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -511,12 +529,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/images/000000012670.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/000000006012.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/python_stubs/-1821537435/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
@@ -631,13 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/np_box_ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="47" column="52" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/metrics/coco_evaluation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -694,48 +699,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/eval.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/object_detection_evaluation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16549">
-          <caret line="881" column="47" selection-start-line="881" selection-start-column="47" selection-end-line="881" selection-end-column="47" />
-          <folding>
-            <element signature="e#1315#1338#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_0.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
           <caret line="87" column="33" lean-forward="true" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
-          <folding>
-            <element signature="e#25#36#0" expanded="true" />
-            <marker date="1545969606938" expanded="true" signature="2001:2002" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/evaluation/voc_eval.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="64" column="22" lean-forward="true" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eval_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding>
-            <element signature="e#40#49#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -752,14 +719,6 @@
     <entry file="file://$PROJECT_DIR$/result/big_image_det_result.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/result/big_image_det_result2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/mscoco_label_map.pbtxt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/eval_model.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -767,51 +726,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/visualization_utils.py">
+    <entry file="file://$PROJECT_DIR$/data/mscoco_label_map.pbtxt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="150" column="33" selection-start-line="150" selection-start-column="7" selection-end-line="150" selection-end-column="33" />
+        <state relative-caret-position="180">
+          <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/np_mask_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/result/big_image_det_result2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evaluation/voc_eval.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="64" column="22" lean-forward="true" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eval.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eval_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="71" column="26" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/np_box_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="69" column="10" lean-forward="true" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="219" lean-forward="true" selection-start-line="219" selection-end-line="219" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/image_util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usage/detection_result_process.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="79" column="35" lean-forward="true" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
-          <folding>
-            <element signature="e#43#52#0" expanded="true" />
-            <marker date="1545816621833" expanded="true" signature="445:450" ph="..." />
-            <marker date="1545816621833" expanded="true" signature="7217:12322" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/object_detection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="186" column="11" lean-forward="true" selection-start-line="186" selection-start-column="11" selection-end-line="186" selection-end-column="11" />
-          <folding>
-            <marker date="1546157233081" expanded="true" signature="6345:7419" ph="..." />
-            <marker date="1546157233081" expanded="true" signature="7888:9204" ph="..." />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/usage/crop_image_detection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="65" column="50" lean-forward="true" selection-start-line="65" selection-start-column="50" selection-end-line="65" selection-end-column="50" />
+        <state relative-caret-position="-33">
+          <caret line="50" column="21" lean-forward="true" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usage/detection_result_process.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3496">
+          <caret line="196" column="32" selection-start-line="196" selection-start-column="32" selection-end-line="196" selection-end-column="32" />
           <folding>
-            <element signature="e#79#88#0" expanded="true" />
-            <marker date="1546158274695" expanded="true" signature="2452:3548" ph="..." />
+            <element signature="e#43#52#0" expanded="true" />
+            <marker date="1547108880244" expanded="true" signature="445:450" ph="..." />
+            <marker date="1547108880244" expanded="true" signature="7476:12581" ph="..." />
+            <marker date="1547108880244" expanded="true" signature="15287:18429" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/object_detection_evaluation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6916">
+          <caret line="374" selection-start-line="374" selection-end-line="374" />
+          <folding>
+            <element signature="e#1315#1338#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/visualization_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="657" column="16" selection-start-line="657" selection-start-column="16" selection-end-line="657" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object_detection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="284" selection-start-line="284" selection-end-line="284" />
         </state>
       </provider>
     </entry>

@@ -8,7 +8,7 @@ net = model_zoo.get_model('mask_rcnn_resnet50_v1b_coco', pretrained=True)
 # 准备图片，并预处理
 # im_fname = utils.download('https://github.com/dmlc/web-data/blob/master/gluoncv/detection/biking.jpg?raw=true',path='biking.jpg')
 img_path = "./images"
-im_fname = os.path.join(img_path,"img1.jpg")
+im_fname = os.path.join(img_path,"img2.jpg")
 x, orig_img = data.transforms.presets.rcnn.load_test(im_fname)
 
 ids, scores, bboxes, masks = [xx[0].asnumpy() for xx in net(x)]
@@ -24,7 +24,4 @@ ax = fig.add_subplot(1, 1, 1)
 ax = utils.viz.plot_bbox(orig_img, bboxes, scores, ids,
                          class_names=net.classes, ax=ax)
 plt.show()
-
-
-
 
